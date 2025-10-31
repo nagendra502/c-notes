@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MySwingApp {
+    private JButton jbtnAlpha;
+    private JButton jbtnBeta;
+    private JLabel jlab;
+
+    public MySwingApp() {
+        JFrame jfrm = new JFrame("A Simple Swing Application");
+        
+        jfrm.setLayout(new FlowLayout());
+
+        jfrm.setSize(220, 90);
+
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        jbtnAlpha = new JButton("Alpha");
+        jbtnBeta = new JButton("Beta");
+        jlab = new JLabel("Press a button.");
+
+        jbtnAlpha.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                jlab.setText("Alpha was pressed.");
+            }
+        });
+
+        jbtnBeta.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                jlab.setText("Beta was pressed.");
+            }
+        });
+
+        jfrm.add(jbtnAlpha);
+        jfrm.add(jbtnBeta);
+        jfrm.add(jlab);
+
+        jfrm.setVisible(true);
+    }
+
+    public static void main(String args[]) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new MySwingApp();
+            }
+        });
+    }
+}

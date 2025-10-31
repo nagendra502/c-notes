@@ -1,0 +1,54 @@
+include <iostream>
+
+using namespace std;
+class Car {
+    public:
+     string brand;
+     string name;
+     int price;
+     int year;
+       
+      void display()
+      {
+          cout<<"brand name="<<brand<<endl;
+          cout<<"model name="<<name<<endl;
+          cout<<"price="<<price<<endl;
+          cout<<"year of manifacturing="<<year<<endl;
+      }
+};
+
+int main()
+{
+    Car car1;
+    cout<<"enter the brand name= "<<endl;
+   
+   cin>>car1.brand;
+    cout<<"enter the modle name=  "<<endl;
+  
+   cin>>car1.name;
+    cout<<"enter the price=  "<<endl;
+    cin>>car1.price; 
+    
+     cout<<"enter the year of manifacturing : "<<endl;
+      cin>>car1.year;
+     
+      
+      Car car2;
+    cout<<"enter the brand name=  "<<endl;
+   // getline(cin.car1.brand);
+   cin>>car2.brand;
+    cout<<"enter the modle name=  "<<endl;
+   // getline(cin.car1.name);
+   cin>>car2.name;
+    cout<<"enter the price=  "<<endl;
+    cin>>car2.price;
+    //getline(cin,car1.name);
+     cout<<"enter the year of manifacturing=  "<<endl;
+      cin>>car2.year;
+      car1.display();
+      cout<<endl;
+      car2.display();
+      
+ return 0;   
+}
+         
