@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+class Car{
+   string brand;
+   string modle;
+   int year; 
+   inr prize;
+   
+
+
+};
+int main()
+{
+    car car1;
+    car1,brand ="mustang";
+    cal1,modle ="a-class";
+    car1,prize = 8000000;
+    car1,year = 2024
+}
